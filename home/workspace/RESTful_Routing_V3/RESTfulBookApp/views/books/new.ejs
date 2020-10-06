@@ -1,0 +1,74 @@
+<!--RestulfulBookApp-->
+<% include ../partials/header %>
+    <!--<div class ="ui main text container segment">-->
+    <!--    <div class ="ui huge header">New Book</div>-->
+    <!--        <form action="/books" method = "POST">-->
+    <!--            <input class = "form-control" type="text" name="book[image]" placeholder="image">-->
+    <!--            <input type="text" name="book[name]" placeholder="name">-->
+    <!--            <input type="text" name="book[description]" placeholder="Your post goes here">-->
+    <!--            <input type="submit"> -->
+    <!--        </form>-->
+    <!--</div>-->
+    
+    <div class ="container">
+        <div class="row">
+            <form action = "/books" method = "POST">
+                
+                <div style = "width: 30%; margin: 50px auto;">
+                    <h1 style= "text-align: center;"></h1>
+                    
+                    <div class="form-group">
+                        <label>Image</label>
+                        <input class = "form-control" type="text" name="book[image]" placeholder="image url">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Name</label>
+                        <input class = "form-control" type="text" name="book[name]" placeholder="name">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Author</label>
+                        <input class = "form-control" type="text" name="book[author]" placeholder="author">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Bio:</label>
+                        <input class = "form-control" type="text" name="book[bio]" placeholder="bio">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Book description</label>
+                        <!--<input class = "form-control" type="text" name="book[description]" placeholder="Your post goes here">-->
+                        <!--<textarea name="book[description]"></textarea>-->
+                        <input class = "form-control" type="text" name="book[description]" placeholder="description">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Genre</label>
+                        <input class = "form-control" type="text" name="book[genre]" placeholder="genre">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Published Info.</label>
+                        <input class = "form-control" type="text" name="book[publishedInfo]" placeholder="publishedInfo">
+                    </div>
+                
+                    
+                    <div class="form-group">
+                        <label>Ratings</label>
+                        <input class = "form-control" type="text" name="book[rating]" placeholder="rating">
+                    </div>
+                    
+                    <div class="form-group">
+                        <button class = "btn btn-lg btn-primary btn-block"> Submit! </button>
+                    </div>
+            </form>
+            <a href="/books">Go Back</a>
+        </div>
+    </div>
+    </div>
+<% include ../partials/footer %>
+
+
+

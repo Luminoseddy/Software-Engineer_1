@@ -1,0 +1,28 @@
+help
+show dbs
+show dbs
+use cat_app
+show collections
+db.cats.find()
+show dbs
+show dbs
+show dbs
+use restful_book_app
+db.books.find()
+use restful_book_app
+db.books.find()
+use restful_book_app
+show dbs
+db.books.find
+db.books.find()
+db.dropdatabase()
+db.dropDatabase()
+ls
+show dbs
+use book_demo
+db.dropDatabase()
+use book_demo_2
+db.dropDatabase()
+use book_store
+db.dropDatabase()
+show dbs

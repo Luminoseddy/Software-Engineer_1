@@ -1,0 +1,33 @@
+<% include partials/header %>
+<h1> Book page grounds </h1>
+
+<!-- To connect>>command line: mongod, then node app.js  -->
+    
+
+    <div class = "container">
+        <header class = "jumbotron">
+            <div class="container">
+                <h1>This is the books page, Welcome</h1>
+                <p> View our books.</p>
+                <p><a class = "btn btn-primary btn-lg" href = "/books/new">Add a new book</a></p>
+            </div>
+        </header>
+        
+        <div class="row text-center" style = "display:flex, flex-wrap: wrap;">
+            <!-- Loops and displays each object in the array  -->
+            <% books.forEach(function(book){ %>
+                <div class="col-md-3 col-sm-6">
+                    <div class="thumbnail"> 
+                        <img src = "<%= book.image %>">
+                    </div>
+                            
+                    <div class = "caption">
+                        <h4><%= book.name %></h4>
+                    </div>
+                </div>
+            <% }); %>
+        </div>
+    </div>
+
+<!-- Once the link is clicked, this will display on the bottom  -->
+<% include partials/footer %>

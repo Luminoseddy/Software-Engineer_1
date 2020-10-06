@@ -1,0 +1,12 @@
+{
+  "name": "books",
+  "id": "6461200",
+  "description": "Software Engineer I : Book store",
+  "gitUrl": "",
+  "workspaceType": "nodejs",
+  "dockerBaseImage": "cloud9/ws-nodejs:2017-08-31T12-15-07Z",
+  "owner": {
+    "name": "palermox",
+    "id": "2270614"
+  }
+}

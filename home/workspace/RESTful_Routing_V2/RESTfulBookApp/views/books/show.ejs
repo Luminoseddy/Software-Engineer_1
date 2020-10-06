@@ -1,0 +1,95 @@
+<!--RestulfulBookApp-->
+<!--Click Book Details and this code happens. -->
+<% include ../partials/header %>
+
+<div class ="container">
+        <div class="row" >
+            
+            <!--<form>-->
+                <div  class="well" style = "width: 70%; margin: 100px auto;">
+                    <div class="form-group">
+                       <h1><%= book.name %></h1>
+                    </div>
+           
+                    <div class="form-group" style="width: 40px; length: 60px;">
+                        <img src="<%= book.image%>"class="thumbnail">
+                    </div>
+                    
+                     <div class="well" style="width: 65%;">
+                       <h4>Author</h4>
+                       <li><%= book.author %></li>
+                       <h4>Bio</h4>
+                       <li><%= book.bio%></li>
+                    </div>
+                    
+                    <div class="well" style="width: 65%;">
+                        <h4>Description</h4>
+                        <div style= "">
+                            <li><%=book.description%></li>
+                        </div>
+                        
+                    </div>
+                    
+                    <div class="well">
+                        <h4>Genre</h4>
+                        <li><%=book.genre%></li>
+                    </div>
+                    
+                    <div class="well">
+                        <h4>Published Info</h4>
+                        <li><%= book.publishedInfo %></li>
+                    </div>
+                    
+                    <div cclass="well">
+                         <h4>Rating</h4>
+                         <li><%=book.rating%></li>
+                    </div>
+                    
+                    <div class="well">
+                        <label>Date purchased</label>
+                        <li><span><%=book.created.toDateString()%></span></li>
+                    </div>
+                    
+                    <div class="well">
+                        <label>Comments</label>
+                        <% book.comments.forEach(function(comment){ %>
+                            <li>
+                                 <strong><%= comment.author %></strong> - <%= comment.text %>
+                            </li>
+                        <% }) %>
+                    </div>
+                    
+                    
+                    <div class="form-group">
+                        <p>
+                            <a class="btn btn-lg btn-primary btn-block" style="width: 30%;" href="/books/<%= book._id %>/comments/new">Add new comment</a>
+                        </p>
+                    </div>
+                    
+                       <div class="form-group">
+                        <p>
+                            <a class="btn btn-lg btn-primary btn-block" style="width: 30%;" href ="/books/<%=book._id%>/edit">< Update ></a>
+                        </p>
+                    </div>
+                    
+                    
+                    
+                    
+                    
+                    
+                    <!--Press the button delete>> activates method delete >> sends it to POST method-->
+                    <form id="delete" action="/books/<%=book._id %>?_method=DELETE" method="POST">
+                        <button class="btn btn-lg btn-primary btn-block" style="width: 30%;">Delete</button>
+                    </form>
+            <!--</form>-->
+            <a href="/books">Go Back</a>
+        </div>
+    </div>
+</div>
+
+<% include ../partials/footer %>
+
+
+
+
+

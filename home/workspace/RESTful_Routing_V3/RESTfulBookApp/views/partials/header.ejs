@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <title> Book App </title>
+        <link rel="stylesheet" type="text/css" href="/stylesheets/app.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"> <!--was 3.3.5-->
+        <!--<link rel="stylesheet" href="/stylesheets/main.css">-->
+    </head>
+    <body>
+        <!--This creates the navbar on top of every web page-->
+        <nav class="navbar navbar-inverse">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class ="navbar-brand" href= "/" >Home</a>
+                </div>
+            
+                <div class="nav navbar-nav">
+                    <a href= "/books/new" class ="navbar-brand">Purchase Book</a>
+                </div>
+                <ul class="nav navbar-nav navbar-right">
+                    <% if(!currentUser){ %>
+                        <li><a href= "/login">Login</a></li>
+                        <li><a href= "/register">Sign up</a></li>
+                    <% }else { %>
+                         <!--<li style="color: red">Signed in as <%= currentUser.username %> </li>-->
+                         <li style="color: red"><a href="#">Signed in as<%= currentUser.username %></a></li>
+                         <li><a href= "/logout">Logout</a></li>
+                    <% } %>
+                </ul>
+            </div>
+        </nav>
+        
+        <!-- The closing for body and html are in trh footer+
+        
+        
